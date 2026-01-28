@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-Compatible-purple?style=flat-square&logo=anthropic)](https://claude.com/claude-code)
-[![Version](https://img.shields.io/badge/Version-2.0.0-blue?style=flat-square)](https://github.com/Sunnyeung369/ai-tutorial-architect)
+[![Version](https://img.shields.io/badge/Version-2.0.0-blue?style=flat-square)](https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect)
 [![Quality](https://img.shields.io/badge/Quality-Gold%20Standard-yellow?style=flat-square)]()
 
 **🎯 专业的 AI 编程教程架构师 - 打造金牌质量的技术教程**
@@ -133,10 +133,10 @@
 cd ~/.claude/skills
 
 # 克隆仓库
-git clone https://github.com/Sunnyeung369/ai-agent-team.git
+git clone https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect.git
 
 # 验证安装
-ls ai-agent-team/SKILL.md  # 应该显示文件存在
+ls ai-tutorial-architect/SKILL.md  # 应该显示文件存在
 ```
 
 </details>
@@ -144,10 +144,10 @@ ls ai-agent-team/SKILL.md  # 应该显示文件存在
 <details>
 <summary><b>方式 2: 手动下载</b></summary>
 
-1. 访问 [Releases](https://github.com/Sunnyeung369/ai-agent-team/releases) 页面
+1. 访问 [Releases](https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect/releases) 页面
 2. 下载最新版本的 ZIP 文件
 3. 解压到 `~/.claude/skills/` 目录
-4. 确保文件夹名为 `ai-agent-team`
+4. 确保文件夹名为 `ai-tutorial-architect`
 
 </details>
 
@@ -156,10 +156,10 @@ ls ai-agent-team/SKILL.md  # 应该显示文件存在
 
 ```bash
 # Windows PowerShell
-Copy-Item -Path "ai-agent-team" -Destination "$env:USERPROFILE\.claude\skills\" -Recurse
+Copy-Item -Path "ai-tutorial-architect" -Destination "$env:USERPROFILE\.claude\skills\" -Recurse
 
 # Linux/Mac
-cp -r ai-agent-team ~/.claude/skills/
+cp -r ai-tutorial-architect ~/.claude/skills/
 ```
 
 </details>
@@ -381,7 +381,7 @@ graph LR
 ## 📁 项目结构
 
 ```
-ai-agent-team/
+ai-tutorial-architect/
 ├── .github/
 │   ├── workflows/          # GitHub Actions 配置
 │   │   └── ci.yml          # 持续集成
@@ -397,7 +397,7 @@ ai-agent-team/
 │   └── advanced_workflows.md
 ├── SKILL.md                # SKILL 配置文件（核心）
 ├── README.md               # 项目说明（本文件）
-├── README_EN.md            # 英文版说明
+├── README-ZH.md            # 中文版说明
 ├── QUICK_REFERENCE.md      # 快速参考卡片
 ├── CHANGELOG.md            # 更新日志
 ├── CONTRIBUTING.md         # 贡献指南
@@ -461,8 +461,8 @@ ai-agent-team/
 
 感谢所有贡献者！
 
-<a href="https://github.com/Sunnyeung369/ai-agent-team/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Sunnyeung369/ai-agent-team" />
+<a href="https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yangmeishux/ai-tutorial-architect" />
 </a>
 
 ---
@@ -472,7 +472,7 @@ ai-agent-team/
 本项目基于 [MIT License](LICENSE) 开源
 
 ```
-Copyright (c) 2026 SUNNYEUNG
+Copyright (c) 2026 yangmeishux
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -492,10 +492,10 @@ in the Software without restriction...
 
 ## 📮 联系方式
 
-- **作者**: [SUNNYEUNG](https://github.com/Sunnyeung369)
-- **项目主页**: [https://github.com/Sunnyeung369/ai-agent-team](https://github.com/Sunnyeung369/ai-agent-team)
-- **问题反馈**: [Issues](https://github.com/Sunnyeung369/ai-agent-team/issues)
-- **功能建议**: [Discussions](https://github.com/Sunnyeung369/ai-agent-team/discussions)
+- **作者**: [yangmeishux](https://github.com/yangmeishux)
+- **项目主页**: [https://github.com/yangmeishux/ai-agent-team](https://github.com/yangmeishux/ai-agent-team)
+- **问题反馈**: [Issues](https://github.com/yangmeishux/ai-agent-team/issues)
+- **功能建议**: [Discussions](https://github.com/yangmeishux/ai-agent-team/discussions)
 
 ---
 
@@ -509,7 +509,7 @@ in the Software without restriction...
 
 <div align="center">
 
-**Made with ❤️ by [SUNNYEUNG](https://github.com/Sunnyeung369)**
+**Made with ❤️ by [yangmeishux](https://github.com/yangmeishux)**
 
 **基于 [newtype-profile](https://github.com/newtype-01/newtype-profile) 架构**
 

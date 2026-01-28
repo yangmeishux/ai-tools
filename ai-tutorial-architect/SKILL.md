@@ -844,11 +844,11 @@ AI Agent Team SKILL 提供了一个简化版的 newtype-profile 架构：
 **灵感来源**: [newtype-01/newtype-profile](https://github.com/newtype-01/newtype-profile)
 **原项目**: 基于通用 ai-agent-team 改造为专业教程系统
 **原作者**: 黄益贺 (huangyihe)
-**教程专业化**: SUNNYEUNG
+**教程专业化**: yangmeishux
 
 ---
 
 **项目**: AI Tutorial Architect
 **版本**: 2.0.0
 **最后更新**: 2026-01-28
-**维护者**: SUNNYEUNG
+**维护者**: yangmeishux

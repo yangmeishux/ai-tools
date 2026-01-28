@@ -426,5 +426,5 @@ ls ~/.claude/skills/ai-tutorial-architect/SKILL.md
 **项目**: AI Tutorial Architect
 **版本**: v2.0.0
 **改进完成时间**: 2026-01-28
-**维护者**: SUNNYEUNG
+**维护者**: yangmeishux
 **基于**: ai-agent-team v1.0.0 改造

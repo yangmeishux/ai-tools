@@ -168,9 +168,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Links
 
-- [GitHub Releases](https://github.com/Sunnyeung369/ai-agent-team/releases)
-- [GitHub Tags](https://github.com/Sunnyeung369/ai-agent-team/tags)
-- [Milestones](https://github.com/Sunnyeung369/ai-agent-team/milestones)
+- [GitHub Releases](https://github.com/yangmeishux/ai-tools/releases)
+- [GitHub Tags](https://github.com/yangmeishux/ai-tools/tags)
+- [Milestones](https://github.com/yangmeishux/ai-tools/milestones)
 
 ---
 

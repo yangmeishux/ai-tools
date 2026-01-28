@@ -41,7 +41,7 @@
 
 ### 报告 Bug
 
-1. 检查 [Issues](https://github.com/Sunnyeung369/ai-agent-team/issues) 确保问题未被报告
+1. 检查 [Issues](https://github.com/yangmeishux/ai-agent-team/issues) 确保问题未被报告
 2. 如果没有，创建新的 Issue
 3. 使用 Bug Report 模板填写信息
 4. 提供清晰的标题和详细描述
@@ -49,7 +49,7 @@
 
 ### 提出新功能
 
-1. 先在 [Discussions](https://github.com/Sunnyeung369/ai-agent-team/discussions) 讨论
+1. 先在 [Discussions](https://github.com/yangmeishux/ai-agent-team/discussions) 讨论
 2. 说明功能的使用场景和价值
 3. 考虑是否适合本项目
 4. 创建 Feature Request Issue
@@ -78,11 +78,11 @@
 
 ```bash
 # 1. Fork 并克隆仓库
-git clone https://github.com/YOUR_USERNAME/ai-agent-team.git
-cd ai-agent-team
+git clone https://github.com/YOUR_USERNAME/ai-tools.git
+cd ai-tools/ai-tutorial-architect
 
 # 2. 添加上游远程仓库
-git remote add upstream https://github.com/Sunnyeung369/ai-agent-team.git
+git remote add upstream https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect.git
 
 # 3. 创建特性分支
 git checkout -b feature/your-feature-name
@@ -335,7 +335,7 @@ docs: update README
 ```bash
 # 1. 安装 SKILL
 cd ~/.claude/skills
-git clone https://github.com/YOUR_USERNAME/ai-agent-team.git
+git clone https://github.com/YOUR_USERNAME/ai-tutorial-architect.git
 
 # 2. 测试基本功能
 claude
@@ -395,10 +395,10 @@ MAJOR.MINOR.PATCH
 
 ## 获得帮助
 
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/Sunnyeung369/ai-agent-team/discussions)
-- 🐛 **Bug 报告**: [Issues](https://github.com/Sunnyeung369/ai-agent-team/issues)
-- 💡 **功能建议**: [Feature Requests](https://github.com/Sunnyeung369/ai-agent-team/issues)
-- 📧 **邮件**: Sunnyeung369@users.noreply.github.com
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/yangmeishux/ai-agent-team/discussions)
+- 🐛 **Bug 报告**: [Issues](https://github.com/yangmeishux/ai-agent-team/issues)
+- 💡 **功能建议**: [Feature Requests](https://github.com/yangmeishux/ai-agent-team/issues)
+- 📧 **邮件**: yangmeishux@users.noreply.github.com
 
 ---
 
@@ -412,8 +412,8 @@ MAJOR.MINOR.PATCH
 
 感谢所有贡献者！
 
-<a href="https://github.com/Sunnyeung369/ai-agent-team/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Sunnyeung369/ai-agent-team" />
+<a href="https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yangmeishux/ai-tutorial-architect" />
 </a>
 
 ---

@@ -411,7 +411,7 @@ claude
 
 ---
 
-**需要帮助？** 查看 [Issues](https://github.com/Sunnyeung369/ai-agent-team/issues) 或 [Discussions](https://github.com/Sunnyeung369/ai-agent-team/discussions)
+**需要帮助？** 查看 [Issues](https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect/issues) 或 [Discussions](https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect/discussions)
 
 ---
 

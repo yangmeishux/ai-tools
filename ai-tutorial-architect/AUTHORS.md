@@ -4,14 +4,14 @@
 
 ## 主要维护者
 
-- **SUNNYEUNG** (@Sunnyeung369) - 项目创建者和主要维护者
+- **yangmeishux** (@yangmeishux) - 项目创建者和主要维护者
 
 ## 贡献者
 
 感谢所有为本项目做出贡献的人！
 
-<a href="https://github.com/Sunnyeung369/ai-agent-team/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=Sunnyeung369/ai-agent-team" />
+<a href="https://github.com/yangmeishux/ai-tools/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=yangmeishux/ai-agent-team" />
 </a>
 
 ## 特别感谢

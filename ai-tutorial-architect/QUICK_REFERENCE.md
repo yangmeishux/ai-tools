@@ -268,4 +268,4 @@ Chief → Researcher (15分钟) → Writer (30分钟) → Editor (15分钟) → 
 **项目**: AI Tutorial Architect
 **基于**: [newtype-profile](https://github.com/newtype-01/newtype-profile) 架构
 **版本**: 2.0.0
-**维护者**: SUNNYEUNG
+**维护者**: yangmeishux
