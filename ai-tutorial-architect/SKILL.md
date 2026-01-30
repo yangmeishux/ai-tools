@@ -1,854 +1,209 @@
 ---
 name: ai-tutorial-architect
-version: "2.0.0"
-description: "AI 编程教程架构师 - 专业的技术教程创作系统。通过 10 个专业 Agent 协作，提供从教学设计、代码验证到质量评估的全流程支持。核心特色：Educator 教学设计、Practitioner 代码验证、Learner-Advocate 读者视角、Version-Archivist 版本管理。8 维质量评估体系确保教程达到金牌标准。适用于技术教程、快速上手指南、概念讲解、最佳实践等场景。触发词: '教程', 'tutorial', '教学设计', '代码验证', '质量评估'"
-user-invocable: true
+description: Use when creating AI programming tutorials, technical educational content, or instructional documentation that requires code examples and step-by-step guidance
 ---
 
-# AI Tutorial Architect SKILL
+# AI Tutorial Architect
 
-## 概述
+Professional tutorial creation system with 11 specialized agents and 8-dimensional quality assessment. Includes AI content humanization for natural, engaging prose.
 
-基于 [newtype-profile](https://github.com/newtype-01/newtype-profile) 架构的 AI 编程教程架构系统，通过专业化的 Agent 团队协作，打造高质量的编程教程。
+**Core principle:** Great tutorials require multiple perspectives - research, pedagogy, technical accuracy, beginner empathy, and human voice.
 
-## 核心理念
+## Quick Start
 
-采用**教程工作室模型**，每个 Agent 扮演特定角色，通过协作完成单 AI 难以处理的教程创作任务。我们不仅关注内容质量，更关注**教学效果**和**可运行性**。
-
-## Agent 团队
-
-### 🎯 Chief (主编/任务协调者)
-
-**角色定位**: 探索伙伴 + 任务协调者（双模式）
-
-**职责**:
-- 理解用户意图和需求
-- 将复杂任务分解为子任务
-- 协调其他 Agent 的工作
-- 整合各 Agent 的输出
-- 质量控制和最终审核
-
-**使用场景**:
-- 复杂任务的初始规划
-- 多步骤任务的流程设计
-- Agent 之间的协调和调度
-- 最终输出的整合和优化
-
-**调用方式**:
 ```
-[Chief] 请帮我规划这个内容创作项目的完整流程
+[Chief] Create a tutorial on [topic] for [audience]
 ```
 
----
+Or use task classifications:
 
-### 🔍 Researcher (研究员/信息收集者)
-
-**角色定位**: 情报员，广泛搜索和发现新信息
-
-**职责**:
-- 进行背景研究
-- 收集相关资料和数据
-- 发现最新的趋势和动态
-- 提供多角度的信息来源
-
-**使用场景**:
-- 需要深入了解某个主题
-- 收集行业趋势和最新发展
-- 寻找案例和参考材料
-- 探索不同观点和见解
-
-**调用方式**:
 ```
-[@researcher] 研究一下 AI 在 2024 年的发展趋势
+[task:tutorial] Complete tutorial with code examples
+[task:concept-guide] Deep concept explanation
+[task:quick-start] Minimal getting-started guide
+[task:best-practice] Professional patterns and practices
 ```
 
----
+## When to Use
 
-### ✍️ Writer (作者/内容创作者)
+- Creating programming tutorials
+- Writing technical documentation with code
+- Building educational content
+- Ensuring tutorial quality
+- Converting knowledge to teachable form
 
-**角色定位**: 内容生产者，负责起草和创作
+## The 10 Agents
 
-**职责**:
-- 基于研究结果创作内容
-- 采用适当的写作风格和语调
-- 确保内容流畅和可读性
-- 符合目标受众的需求
+### Core Team (6 agents)
 
-**使用场景**:
-- 撰写文章、报告、文档
-- 创作营销文案
-- 编写技术教程
-- 生成创意内容
+| Agent | Role | Trigger |
+|-------|------|---------|
+| [Chief](skills/chief/SKILL.md) | Project coordinator | Complex multi-agent tasks |
+| [Researcher](skills/researcher/SKILL.md) | Information gatherer | New topics, options analysis |
+| [Writer](skills/writer/SKILL.md) | Content creator | Drafting content |
+| [Editor](skills/editor/SKILL.md) | Content refiner | Polishing, structure |
+| [Fact-Checker](skills/fact-checker/SKILL.md) | Accuracy validator | Technical claims |
+| [Archivist](skills/archivist/SKILL.md) | Knowledge manager | Finding related work |
 
-**调用方式**:
-```
-[@writer] 基于研究结果，撰写一篇关于 AI 趋势的文章
-```
+### Tutorial Specialists (4 agents)
 
----
+| Agent | Role | Specialty |
+|-------|------|-----------|
+| [Educator](skills/educator/SKILL.md) | Learning designer | Pedagogy, learning paths |
+| [Practitioner](skills/practitioner/SKILL.md) | Code validator | Executable verification |
+| [Learner-Advocate](skills/learner-advocate/SKILL.md) | Beginner voice | Accessibility, clarity |
+| [Version-Archivist](skills/version-archivist/SKILL.md) | Compatibility | Version management |
 
-### 📝 Editor (编辑/内容精炼者)
+### Content Enhancement (1 agent)
 
-**角色定位**: 内容优化者，提升内容质量
+| Agent | Role | Specialty |
+|-------|------|-----------|
+| [Humanizer](skills/humanizer/SKILL.md) | AI content humanizer | Natural tone, removing AI patterns |
 
-**职责**:
-- 审查和精炼内容
-- 优化结构和逻辑
-- 改善语言表达
-- 确保一致性和准确性
+## Workflows
 
-**使用场景**:
-- 审查初稿并提供反馈
-- 优化段落结构和逻辑流
-- 提升语言表达和文风
-- 确保内容符合规范
+### Full Tutorial Workflow (Gold Standard)
 
-**调用方式**:
-```
-[@editor] 审查并优化这篇文章的结构和表达
-```
-
----
-
-### ✅ Fact-Checker (核查员/信息验证者)
-
-**角色定位**: 信息验证者，确保内容准确性
-
-**职责**:
-- 验证事实和数据的准确性
-- 检查引用和来源的可信度
-- 识别可能的问题和争议
-- 提供客观的评估
-
-**使用场景**:
-- 验证统计数据和事实陈述
-- 检查引用来源的可靠性
-- 识别潜在的偏见或误导
-- 确保内容的准确性
-
-**调用方式**:
-```
-[@fact-checker] 验证文章中提到的数据和事实
+```dot
+digraph workflow {
+    rankdir=TB;
+    
+    "Chief: Define goals" -> "Researcher + Archivist";
+    "Researcher + Archivist" -> "Educator: Design path";
+    "Educator: Design path" -> "Writer: Create content";
+    "Writer: Create content" -> "Practitioner: Verify code";
+    "Practitioner: Verify code" -> "Learner-Advocate: Check clarity";
+    "Learner-Advocate: Check clarity" -> "Editor: Polish";
+    "Editor: Polish" -> "Humanizer: Add natural tone (optional)";
+    "Humanizer: Add natural tone (optional)" -> "Version-Archivist: Document versions";
+    "Version-Archivist: Document versions" -> "Fact-Checker: Verify accuracy";
+    "Fact-Checker: Verify accuracy" -> "Chief: Final review";
+}
 ```
 
----
+See [tutorial-workflow skill](skills/tutorial-workflow/SKILL.md) for detailed workflows.
 
-### 📚 Archivist (档案员/知识管理者)
+## 8-Dimensional Quality
 
-**角色定位**: 知识库管理者，建立信息和发现关联
+| Dimension | Validator | Key Question |
+|-----------|-----------|--------------|
+| Runnability | Practitioner | Does every example run? |
+| Environment | Practitioner | Is setup complete? |
+| Progressiveness | Educator | Is difficulty appropriate? |
+| Term Explanation | Learner-Advocate | Are terms explained? |
+| Error Handling | Practitioner + Learner-Advocate | Are common errors covered? |
+| Version Clarity | Version-Archivist | Are versions documented? |
+| Practical Value | Educator + Practitioner | Does it solve real problems? |
+| Reproducibility | Practitioner + Learner-Advocate | Can readers follow along? |
 
-**职责**:
-- 检索相关知识和文档
-- 建立信息之间的关联
-- 提供历史参考和案例
-- 组织和管理知识库
+See [quality-assurance skill](skills/quality-assurance/SKILL.md) for assessment process.
 
-**使用场景**:
-- 查找相关的历史文档
-- 建立知识点之间的联系
-- 提供过往案例和参考
-- 组织项目知识库
+## Task Classifications
 
-**调用方式**:
+| Task | Agents | Time |
+|------|--------|------|
+| `[task:tutorial]` | All 11 | 6-9h |
+| `[task:concept-guide]` | Researcher, Educator, Writer, Fact-Checker | 3-4h |
+| `[task:quick-start]` | Writer, Practitioner, Version-Archivist | 2-3h |
+| `[task:best-practice]` | Researcher, Writer, Practitioner | 2-3h |
+| `[task:humanize]` | Humanizer, Editor | 30-60m |
+
+**Humanization Task:**
 ```
-[@archivist] 查找我们之前关于类似主题的文档
-```
-
----
-
-### 🎓 Educator (技术教育专家)
-
-**角色定位**: 教学设计师，将技术知识转化为可学习的内容
-
-**职责**:
-- 将复杂技术概念转化为易懂的内容
-- 设计学习路径和难度梯度
-- 决定内容的深度和广度
-- 确保实践性和可操作性
-- 识别认知障碍并提供解决策略
-
-**使用场景**:
-- AI 编程教程的受众定位和学习路径设计
-- 概念讲解的深度把控
-- 实例设计和练习编排
-- 技术内容的可学习性评估
-
-**调用方式**:
-```
-[@educator] 为初中级开发者设计一个学习 RAG 技术的路径
-[@educator] 评估这个技术概念的讲解是否适合初学者
+[@humanizer] Remove AI patterns from this content
+[task:humanize] Make this tutorial sound more natural
 ```
 
-**特别说明**:
-Educator 是技术内容与学习者之间的桥梁，关注"如何让读者理解和掌握"，而非仅仅呈现知识。
+## Commands
 
----
+| Command | Purpose |
+|---------|---------|
+| `/tutorial:create` | Full tutorial creation workflow |
+| `/tutorial:verify` | 8-dimensional quality check |
+| `/code:validate` | Execute and verify code examples |
 
-### 🧪 Practitioner (代码实战验证者)
+## Example Usage
 
-**角色定位**: 实战测试员，确保代码可运行和可复现
+### Creating a Complete Tutorial
 
-**职责**:
-- 验证代码示例的可运行性
-- 测试环境配置的完整性
-- 检查依赖和版本兼容性
-- 验证实际输出与文档描述的一致性
-- 识别和标注常见错误和陷阱
-
-**使用场景**:
-- 教程中的代码示例验证
-- 环境配置步骤测试
-- 实际运行结果与预期对比
-- 边界条件和异常情况测试
-
-**调用方式**:
 ```
-[@practitioner] 验证这段代码在实际环境中能否运行
-[@practitioner] 检查教程中的环境配置是否完整
-[@practitioner] 标注这段代码可能出现的常见错误
+User: [Chief] I need a tutorial on "Python Asyncio" for intermediate developers
+
+Chief: I'll coordinate the tutorial team:
+1. Researcher will gather asyncio patterns and examples
+2. Archivist will find related async tutorials
+3. Educator will design the learning progression
+4. Writer will create content with code
+5. Practitioner will verify all examples run
+6. Learner-Advocate will check clarity
+7. Editor will polish the structure
+8. Version-Archivist will document Python versions
+9. Fact-Checker will verify technical accuracy
+10. I'll do final review
+
+Expected: 4-5 hour comprehensive tutorial
 ```
 
-**特别说明**:
-对于 AI 编程教程，技术准确性（Fact-Checker）≠ 可运行性（Practitioner）。Practitioner 专注于"代码能跑通"。
+### Quick Content Production
+
+```
+User: [@writer] Write a quick guide on "Setting up Docker"
+User: [@practitioner] Verify the setup steps work
+User: [@editor] Polish and format
+
+Time: 1 hour
+Output: Working quick-start guide
+```
+
+### Quality Verification
+
+```
+User: [task:quality-check] Review my tutorial
+
+System runs 8-dimensional assessment:
+- Runnability: ✅ All code executes
+- Environment: ✅ Setup documented
+- Progressiveness: ⚠️ Too steep at section 3
+- Term Explanation: ✅ Terms defined
+- Error Handling: ⚠️ Missing common error
+- Version Clarity: ✅ Versions documented
+- Practical Value: ✅ Real-world examples
+- Reproducibility: ✅ Steps clear
+
+Result: 🥈 Silver (2 minor improvements needed)
+```
+
+## Philosophy
+
+1. **Code must run** - Every example executable
+2. **Readers come first** - Beginner perspective essential
+3. **Quality is measurable** - 8 dimensions define excellence
+4. **Specialization wins** - Different agents for different expertise
+5. **Process ensures consistency** - Workflows produce reliable results
+
+## Best Practices
+
+**Do:**
+- Start with Chief for complex projects
+- Use Practitioner for all code tutorials
+- Include Learner-Advocate for beginner content
+- Run quality assessment before publication
+
+**Don't:**
+- Skip code verification
+- Assume readers know what you know
+- Skip quality checks for "simple" tutorials
+- Use all agents for simple tasks
+
+## Integration
+
+Works with other skills:
+- `/brainstorming` - Before tutorial planning
+- `/docx`, `/pdf` - Export final tutorials
+- `/obsidian-markdown` - Knowledge base format
 
 ---
 
-### 👤 Learner-Advocate (读者代表/初学者视角)
-
-**角色定位**: 学习者代言人，从初学者角度审查内容
-
-**职责**:
-- 从初学者角度审查内容
-- 识别可能的困惑点和认知障碍
-- 确保术语有充分解释
-- 检查是否有跳跃式推理或隐含假设
-- 提供"为什么"的补充说明
-
-**使用场景**:
-- 识别"懂的人才知道"的隐含假设
-- 发现讲解中的逻辑跳跃
-- 提供补充说明和背景知识的建议
-- 评估内容的认知负荷
-
-**调用方式**:
-```
-[@learner-advocate] 从初学者角度审查这段代码讲解
-[@learner-advocate] 识别哪些地方可能导致读者困惑
-[@learner-advocate] 检查所有技术术语是否有解释
-```
-
-**特别说明**:
-Learner-Advocate 是读者的"防坑向导"，避免创作者陷入"知识诅咒"（假设读者知道作者知道的一切）。
-
----
-
-### 📋 Version-Archivist (版本追踪者)
-
-**角色定位**: 版本管理员，追踪技术栈的版本信息
-
-**职责**:
-- 记录代码和环境的版本信息
-- 追踪 API 变更和弃用情况
-- 标注不同版本的兼容性和差异
-- 维护更新日志和迁移指南
-- 提供版本选择的建议
-
-**使用场景**:
-- 教程版本管理和标注
-- 技术栈版本兼容性说明
-- API 变更的影响评估
-- 版本升级的注意事项
-
-**调用方式**:
-```
-[@version-archivist] 标注这个教程涉及的所有技术栈版本
-[@version-archivist] 检查这个 API 在不同版本中的兼容性
-[@version-archivist] 提供版本选择的最佳实践建议
-```
-
-**特别说明**:
-AI 编程教程对版本高度敏感（Python 3.10 vs 3.12 差异可能很大），Version-Archivist 确保教程的时效性和准确性。
-
----
-
-## 任务分类系统
-
-基于任务类型自动选择合适的 Agent：
-
-### 通用任务类别
-
-| 任务类别 | 主要 Agent | 辅助 Agent | 典型场景 |
-|---------|-----------|-----------|---------|
-| **research** | researcher | archivist | 信息研究、趋势发现、背景调查 |
-| **writing** | writer | researcher, editor | 内容创作、文章撰写、文案生成 |
-| **editing** | editor | fact-checker | 内容精炼、结构优化、质量提升 |
-| **fact-check** | fact-checker | researcher | 事实验证、来源核查、可信度评估 |
-| **archive** | archivist | researcher | 知识检索、文档查找、关联建立 |
-| **planning** | chief | 所有 Agent | 项目规划、任务分解、流程设计 |
-| **review** | chief + editor | fact-checker | 全面审查、质量把控、最终审核 |
-| **quick** | 任意单个 Agent | 无 | 简单快速任务，单一 Agent 即可 |
-
-### AI 编程教程专用类别
-
-| 任务类别 | 主要 Agent | 辅助 Agent | 核心关注点 |
-|---------|-----------|-----------|-----------|
-| **tutorial** | writer + educator | practitioner, learner-advocate | 可运行性、易懂性、渐进性 |
-| **concept-guide** | educator + writer | researcher, fact-checker | 准确性、深度、类比和案例 |
-| **quick-start** | writer + practitioner | version-archivist | 简洁性、成功率、速度 |
-| **best-practice** | researcher + writer | practitioner, fact-checker | 专业性、规范性、陷阱提示 |
-
-**教程类别说明**:
-
-- **tutorial（完整教程）**: 系统性的学习内容，包含理论讲解、代码示例、练习题
-  - 必须经过 Practitioner 验证代码可运行
-  - Learner-Advocate 审查可理解性
-  - Educator 设计学习路径
-
-- **concept-guide（概念指南）**: 深入讲解某个技术概念
-  - 重点是准确性和深度
-  - 需要多角度的类比和案例
-  - 适合有一定基础的读者
-
-- **quick-start（快速上手）**: 最小可行示例，快速跑起来
-  - 省略理论，直接动手
-  - 代码必须 100% 可运行
-  - 明确标注版本信息
-
-- **best-practice（最佳实践）**: 业界标准和规范
-  - 强调"为什么这样做"
-  - 标注常见错误和反模式
-  - 提供实战经验总结
-
----
-
-## 典型工作流程
-
-### 1. 内容创作流程（通用）
-
-```
-[Chief] 接收需求 → 分解任务
-    ↓
-[@researcher] 研究主题，收集信息
-    ↓
-[@writer] 基于研究结果创作内容
-    ↓
-[@editor] 审查并优化内容
-    ↓
-[@fact-checker] 验证事实和数据
-    ↓
-[Chief] 最终审核并整合输出
-```
-
-### 2. AI 编程教程创作流程（推荐）
-
-```
-[Chief] 定义教程目标、受众群体、学习成果
-    ↓
-[@researcher] 研究技术主题、收集资料、发现常见问题
-    ↓
-[@educator] 设计学习路径、难度梯度、知识点拆解
-    ↓
-[@writer] 撰写教程内容、编写代码示例
-    ↓
-[@practitioner] 实际运行代码、验证可复现性 ⚠️ 关键环节
-    ↓
-[@learner-advocate] 从初学者角度审查、识别困惑点 ⚠️ 关键环节
-    ↓
-[@editor] 整合反馈、优化内容结构和表达
-    ↓
-[@version-archivist] 标注技术栈版本、检查兼容性
-    ↓
-[@fact-checker] 验证技术事实和数据准确性
-    ↓
-[Chief] 最终审核并发布
-    ↑___________________________________________________↑
-              反馈闭环：根据测试结果修正内容
-```
-
-**关键改进点**：
-- ✅ 添加代码验证环节（Practitioner）
-- ✅ 添加读者视角审查（Learner-Advocate）
-- ✅ 建立反馈闭环（验证→修正→再验证）
-- ✅ 版本管理（Version-Archivist）
-- ✅ 教学设计前置（Educator）
-
-### 3. 研究分析流程
-
-```
-[Chief] 定义研究目标
-    ↓
-[@researcher] 进行初步研究
-    ↓
-[@archivist] 建立知识关联，查找历史资料
-    ↓
-[@fact-checker] 验证关键信息
-    ↓
-[@writer] 撰写研究报告
-    ↓
-[@editor] 优化报告结构
-    ↓
-[Chief] 整合并输出最终分析
-```
-
-### 4. 知识管理流程
-
-```
-[Chief] 确定知识管理目标
-    ↓
-[@archivist] 检索相关文档
-    ↓
-[@researcher] 补充最新信息
-    ↓
-[@fact-checker] 验证内容准确性
-    ↓
-[@editor] 整理和优化知识结构
-    ↓
-[Chief] 建立知识索引和关联
-```
-
----
-
-## AI 编程教程质量标准
-
-对于 AI 编程教程，我们采用 **8 维质量评估体系**：
-
-### 📋 质量检查清单
-
-#### 1. 可运行性 (Runnability)
-- ✅ 所有代码示例经过实际测试
-- ✅ 能在指定的环境中成功运行
-- ✅ 输出结果与文档描述一致
-- ✅ 没有缺失的依赖或配置步骤
-
-**检查者**: Practitioner
-
-#### 2. 环境完整性 (Environment Completeness)
-- ✅ 明确列出所有依赖和版本号
-- ✅ 提供完整的环境配置步骤
-- ✅ 标注操作系统兼容性
-- ✅ 说明前置条件（如已安装的工具）
-
-**检查者**: Practitioner + Version-Archivist
-
-#### 3. 渐进性 (Progressiveness)
-- ✅ 难度梯度合理，从简单到复杂
-- ✅ 每个步骤都有明确的学习目标
-- ✅ 避免一次性引入过多新概念
-- ✅ 提供练习题或实践任务
-
-**检查者**: Educator
-
-#### 4. 术语解释 (Term Explanation)
-- ✅ 专业术语首次出现时有解释
-- ✅ 使用类比和生活化的例子
-- ✅ 避免"懂的人才知道"的隐含假设
-- ✅ 提供术语表或索引
-
-**检查者**: Learner-Advocate
-
-#### 5. 错误处理 (Error Handling)
-- ✅ 标注常见错误和坑点
-- ✅ 提供错误排查步骤
-- ✅ 说明错误信息的含义
-- ✅ 给出解决方案
-
-**检查者**: Practitioner + Learner-Advocate
-
-#### 6. 版本明确 (Version Clarity)
-- ✅ 标注所有技术栈的版本号
-- ✅ 说明版本选择的原因
-- ✅ 提示版本兼容性问题
-- ✅ 给出版本升级建议
-
-**检查者**: Version-Archivist
-
-#### 7. 实际价值 (Practical Value)
-- ✅ 解决真实世界的问题
-- ✅ 提供可复用的代码模式
-- ✅ 说明应用场景和适用范围
-- ✅ 避免过于简单或脱离实际
-
-**检查者**: Educator + Practitioner
-
-#### 8. 可复现性 (Reproducibility)
-- ✅ 步骤清晰，无歧义
-- ✅ 每个中间结果可验证
-- ✅ 提供完整的示例代码
-- ✅ 说明可能的变体和选项
-
-**检查者**: Practitioner + Learner-Advocate
-
-### 质量检查流程
-
-```
-[Chief] 启动质量检查
-    ↓
-[@practitioner] 检查可运行性、环境完整性
-    ↓
-[@educator] 评估渐进性、实际价值
-    ↓
-[@learner-advocate] 审查术语解释、可复现性
-    ↓
-[@version-archivist] 确认版本明确
-    ↓
-[@practitioner + @learner-advocate] 共同检查错误处理
-    ↓
-[Chief] 汇总问题，生成改进清单
-    ↓
-[@writer] 根据清单修改内容
-    ↓
-[Chief] 重新检查，直到通过所有标准 ✅
-```
-
-### 质量等级
-
-- 🥇 **金牌标准**: 通过所有 8 项检查
-- 🥈 **银牌标准**: 通过 6-7 项核心检查
-- 🥉 **铜牌标准**: 通过 4-5 项基本检查
-
-**建议**: AI 编程教程应至少达到银牌标准。
-
----
-
-## 使用指南
-
-### 基本用法
-
-#### 方式一：指定特定 Agent
-
-```
-# 请研究员进行背景调查
-[@researcher] 研究一下微服务架构的最新趋势
-
-# 请作者撰写内容
-[@writer] 基于研究结果，撰写一篇技术文章
-
-# 请编辑优化内容
-[@editor] 审查并优化这篇文章
-```
-
-#### 方式二：让主编自动协调
-
-```
-# 完整的内容创作任务
-[Chief] 我需要创作一篇关于 AI Agent 的深度文章
-      请安排团队协作完成
-
-# 复杂的研究分析任务
-[Chief] 帮我分析一下区块链技术在供应链中的应用前景
-      请团队协作进行深入研究
-```
-
-#### 方式三：使用任务分类
-
-```
-# 研究任务
-[task:research] 调查量子计算的发展现状
-
-# 写作任务
-[task:writing] 撰写一份产品发布新闻稿
-
-# 编辑任务
-[task:editing] 优化这份技术文档的结构和表达
-
-# 核查任务
-[task:fact-check] 验证报告中的所有统计数据
-```
-
----
-
-## 高级功能
-
-### 1. 并行处理
-
-对于可以并行执行的独立任务，Chief 会协调多个 Agent 同时工作：
-
-```
-[Chief] 我需要：
-      - 研究市场趋势（researcher）
-      - 分析竞品情况（archivist）
-      - 收集用户反馈（researcher）
-      请协调团队并行完成这些任务
-```
-
-### 2. 迭代优化
-
-支持多轮迭代，持续改进内容质量：
-
-```
-[Chief] 启动迭代优化流程
-      第一轮：writer 起草
-      第二轮：editor 优化
-      第三轮：fact-checker 验证
-      直到达到质量标准
-```
-
-### 3. 质量检查点
-
-在关键节点设置质量检查：
-
-```
-[Chief] 设置质量检查点：
-      - 研究阶段：确保信息全面
-      - 写作阶段：确保内容完整
-      - 编辑阶段：确保结构清晰
-      - 最终阶段：确保准确无误
-```
-
-### 4. Agent 投票机制
-
-对于争议性问题，可以采用多 Agent 投票：
-
-```
-[Chief] 这个技术方案有争议
-      请 researcher, archivist, fact-checker
-      分别评估并提供意见
-      综合分析后做出决策
-```
-
----
-
-## 最佳实践
-
-### ✅ DO (推荐做法)
-
-1. **明确任务目标**
-   - 清楚地说明你想要达成的目标
-   - 提供足够的背景和上下文
-
-2. **合理选择 Agent**
-   - 简单任务使用单个 Agent
-   - 复杂任务让 Chief 协调团队
-   - 使用任务分类自动选择
-
-3. **遵循工作流程**
-   - 研究先行（researcher → writer）
-   - 验证在后（fact-checker 辅助）
-   - 迭代优化（多轮 editor）
-
-4. **提供具体反馈**
-   - 对 Agent 的输出提供反馈
-   - 明确指出需要改进的地方
-
-### ❌ DON'T (避免做法)
-
-1. 不要跳过研究直接创作（缺乏深度）
-2. 不要忽略事实核查（可能出错）
-3. 不要省略编辑环节（质量不佳）
-4. 不要对简单任务使用全部 Agent（效率低）
-
----
-
-## 示例场景
-
-### 场景 1: 撰写技术博客
-
-```
-用户: [Chief] 我需要写一篇关于 RAG 技术的技术博客
-
-Chief: 好的，我将协调团队完成：
-
-1. [@researcher] 研究 RAG 技术的原理、应用场景、最新进展
-2. [@archivist] 查找我们之前的相关文档和案例
-3. [@writer] 基于研究结果撰写技术博客
-4. [@editor] 审查并优化技术内容和表达
-5. [@fact-checker] 验证技术细节和数据
-6. [Chief] 最终审核并整合输出
-
-预计时间线：研究 → 起草 → 编辑 → 核查 → 定稿
-```
-
-### 场景 2: 市场分析报告
-
-```
-用户: [Chief] 分析 AI Agent 市场的发展前景
-
-Chief: 我将组织团队进行全面分析：
-
-1. [@researcher] 调研市场规模、增长趋势、主要玩家
-2. [@archivist] 收集历史数据和过往案例
-3. [@fact-checker] 验证市场数据和预测
-4. [@writer] 撰写分析报告
-5. [@editor] 优化报告结构和逻辑
-6. [Chief] 整合并提供最终洞察
-
-输出：完整的市场分析报告 + 关键发现 + 发展建议
-```
-
-### 场景 3: 知识库构建
-
-```
-用户: [Chief] 帮我构建一个云原生技术知识库
-
-Chief: 我将协调知识管理团队：
-
-1. [@archivist] 设计知识库结构和分类体系
-2. [@researcher] 收集各个技术领域的核心知识
-3. [@fact-checker] 验证技术概念的准确性
-4. [@editor] 整理和优化知识条目
-5. [@archivist] 建立知识点之间的关联
-6. [Chief] 建立索引和检索系统
-
-输出：结构化知识库 + 知识图谱 + 检索系统
-```
-
-### 场景 4: 创建 AI 编程教程（推荐流程）⭐
-
-```
-用户: [Chief] 我要写一个"用 Cursor AI 做 React 开发"的教程
-      目标读者：初中级前端开发者
-      学习时长：约 2 小时
-
-Chief: 好的，我将协调 AI 编程教程专家团队：
-
-第 1 阶段：规划和设计
-1. [Chief] 明确教程目标、受众、学习成果
-2. [@researcher] 调研 Cursor AI 功能、React 生态、常见问题
-3. [@educator] 设计学习路径（环境配置 → 基础操作 → 实战项目）
-
-第 2 阶段：内容创作
-4. [@writer] 撰写教程内容，编写代码示例
-5. [@practitioner] 实际运行代码，验证可复现性 ⚠️
-6. [@learner-advocate] 从初学者角度审查，识别困惑点 ⚠️
-
-第 3 阶段：质量保证
-7. [@editor] 整合反馈，优化内容和结构
-8. [@version-archivist] 标注版本（Cursor v1.2, React 18.2, Node 20）
-9. [@fact-checker] 验证技术细节和 API 准确性
-
-第 4 阶段：最终审核
-10. [Chief] 按照 8 维质量标准进行最终检查
-11. [@writer] 根据反馈进行最后修正
-12. [Chief] 批准并发布教程
-
-输出：
-✅ 完整教程（含代码示例）
-✅ 环境配置清单
-✅ 常见问题排查指南
-✅ 版本兼容性说明
-✅ 质量检查报告
-
-预计时间：规划(1h) → 创作(3h) → 验证(2h) → 修正(1h) = 7 小时
-质量等级：🥇 金牌标准
-```
-
-**与场景 1 的区别**：
-- ✅ 添加了 Educator 进行教学设计
-- ✅ Practitioner 实际验证代码可运行
-- ✅ Learner-Advocate 确保初学者能理解
-- ✅ Version-Archivist 标注版本信息
-- ✅ 建立了反馈闭环（验证→修正→再验证）
-- ✅ 有明确的质量等级标准
-
-**关键改进**：
-- 场景 1 适用于快速产出内容
-- 场景 4 适用于高质量的 AI 编程教程
-- 场景 4 的时间更长，但质量更高、错误更少
-
----
-
-## 与其他 SKILL 的协作
-
-### 推荐组合
-
-1. **+ planning-with-files**
-   - 先用 planning-with-files 制定项目计划
-   - 再用 ai-agent-team 执行具体任务
-
-2. **+ content-research-writer**
-   - 使用 content-research-writer 的研究能力
-   - 配合 ai-agent-team 的协作模式
-
-3. **+ obsidian-markdown**
-   - 用 ai-agent-team 创作内容
-   - 用 obsidian-markdown 格式化输出
-
-4. **+ pdf/xlsx/docx**
-   - Agent 团队完成内容创作
-   - 输出为各种格式的文档
-
----
-
-## 配置和自定义
-
-### 自定义 Agent 角色
-
-你可以根据项目需求自定义 Agent 的角色和职责：
-
-```
-示例：添加专门的代码审查 Agent
-
-[@code-reviewer] 专门负责代码质量审查
-- 遵循最佳实践
-- 检查安全性问题
-- 优化性能和可维护性
-```
-
-### 自定义工作流程
-
-根据你的具体需求调整工作流程：
-
-```
-示例：快速内容生产流程
-
-1. [Chief] 快速任务分解
-2. [@researcher] 并行收集信息（30分钟）
-3. [@writer] 快速起草（1小时）
-4. [@editor] 简要优化（30分钟）
-5. [Chief] 快速审核并输出
-
-总时长：约 2-3 小时
-```
-
----
-
-## 限制和注意事项
-
-1. **模型限制**
-   - 所有 Agent 共用同一个底层模型（Claude Sonnet 4.5）
-   - 不支持 newtype-profile 的多模型切换（需要手动模拟）
-
-2. **并发限制**
-   - 实际上是串行调用各 Agent 的能力
-   - 不是真正的并行执行（但逻辑上可以并行）
-
-3. **上下文共享**
-   - Agent 之间需要通过文本传递信息
-   - 不像 newtype-profile 有完整的上下文共享机制
-
-4. **状态管理**
-   - 需要手动维护 Agent 之间的状态
-   - 建议配合 planning-with-files 使用
-
----
-
-## 总结
-
-AI Agent Team SKILL 提供了一个简化版的 newtype-profile 架构：
-
-✅ **保留了核心价值**:
-- 多角色协作模式
-- 任务分类系统
-- 结构化工作流程
-
-✅ **适配 Claude Code**:
-- 使用 SKILL 机制
-- 遵循 SKILL.md 规范
-- 可与其他 SKILL 配合
-
-✅ **实用性强**:
-- 适用于复杂任务
-- 提升内容质量
-- 规范工作流程
-
-**灵感来源**: [newtype-01/newtype-profile](https://github.com/newtype-01/newtype-profile)
-**原项目**: 基于通用 ai-agent-team 改造为专业教程系统
-**原作者**: 黄益贺 (huangyihe)
-**教程专业化**: yangmeishux
-
----
-
-**项目**: AI Tutorial Architect
-**版本**: 2.0.0
-**最后更新**: 2026-01-28
-**维护者**: yangmeishux
+**Version:** 2.2.0  
+**Based on:** [superpowers](https://github.com/obra/superpowers) architecture  
+**License:** MIT

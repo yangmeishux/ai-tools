@@ -17,6 +17,106 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Interactive quality checklist UI
 - Web UI control panel
 
+## [2.2.0] - 2026-01-30
+
+### 🎉 New Feature - AI Content Humanization
+
+Based on research into AI writing patterns and Wikipedia's "Signs of AI writing" guide.
+
+#### Added - New Agent: Humanizer
+- **skills/humanizer/SKILL.md** - Complete humanization skill
+- **24 AI pattern categories** documented
+- **Before/after examples** for each pattern
+- **Humanization workflow** integrated into tutorial creation
+
+#### Added - AI Patterns Reference
+- **skills/humanizer/ai-patterns-reference.md** - Comprehensive reference
+- Detection regex patterns
+- Severity classifications
+- Quick reference card
+
+#### Changed - Updated Workflows
+- **tutorial-workflow/SKILL.md** - Added Humanizer as optional step
+- **SKILL.md** - Updated to 11 agents
+- **README.md** - Added Humanizer to agent list
+
+#### Added - New Task Classification
+- `[task:humanize]` - Quick humanization task
+- `[@humanizer]` - Direct agent invocation
+
+### AI Patterns Addressed
+
+1. **Inflated Language** - "pivotal moment", "crucial role"
+2. **AI Vocabulary** - "additionally", "landscape", "testament"
+3. **Formulaic Structures** - Rule of three, negative parallelisms
+4. **Formatting Issues** - Overused em-dashes, title case headings
+5. **Chatbot Artifacts** - "I hope this helps", sycophantic tone
+6. **Repetition Issues** - Synonym cycling, formulaic challenges
+
+### Usage
+
+```bash
+[@humanizer] Remove AI patterns from this tutorial
+[task:humanize] Make this content sound more natural
+```
+
+## [2.1.0] - 2026-01-30
+
+### 🎉 Major Refactoring - Professional Architecture
+
+Based on [superpowers](https://github.com/obra/superpowers) architecture patterns, completely restructured for professional use.
+
+#### Added - Plugin System
+- `.claude-plugin/plugin.json` - Claude Code plugin configuration
+- `.claude-plugin/marketplace.json` - Marketplace metadata
+- Support for `/plugin install` workflow
+
+#### Added - Modular Skill Structure
+Each agent now has its own skill directory following superpowers conventions:
+- `skills/chief/SKILL.md` - Project coordination
+- `skills/researcher/SKILL.md` - Information gathering  
+- `skills/writer/SKILL.md` - Content creation
+- `skills/editor/SKILL.md` - Content refinement
+- `skills/fact-checker/SKILL.md` - Accuracy validation
+- `skills/archivist/SKILL.md` - Knowledge management
+- `skills/educator/SKILL.md` - Learning design
+- `skills/practitioner/SKILL.md` - Code validation
+- `skills/learner-advocate/SKILL.md` - Beginner perspective
+- `skills/version-archivist/SKILL.md` - Version tracking
+- `skills/tutorial-workflow/SKILL.md` - Workflow definitions
+- `skills/quality-assurance/SKILL.md` - Quality framework
+
+#### Added - Command System
+- `commands/tutorial-create.md` - Full tutorial creation
+- `commands/tutorial-verify.md` - Quality verification
+- `commands/code-validate.md` - Code validation
+
+#### Added - Agent Definitions
+- `agents/code-reviewer.md` - Code review agent
+
+#### Added - Documentation
+- `docs/ARCHITECTURE.md` - System architecture
+- `docs/INSTALLATION.md` - Installation guide
+
+#### Changed - Skill Format
+- Adopted superpowers YAML frontmatter style
+- Name and description only in frontmatter
+- Focus on "Use when..." trigger conditions
+- Graphviz flowcharts for decision points
+- Token-efficient, focused content
+
+#### Changed - Main SKILL.md
+- Rewritten following superpowers patterns
+- Clearer agent selection guidance
+- Workflow visualization
+- Quality framework documentation
+
+#### Changed - README.md
+- Updated for new architecture
+- Installation via plugin marketplace
+- Clearer quick start
+- Professional presentation
+
 ## [2.0.0] - 2026-01-28
 
 ### 🎉 Major Release - AI Programming Tutorial Specialization
