@@ -1,0 +1,21 @@
+{
+  "name": "ai-tutorial-architect",
+  "description": "Professional AI programming tutorial creation system with 10 specialized agents, 8-dimensional quality assessment, and tutorial-specific workflows",
+  "version": "2.2.0",
+  "author": {
+    "name": "yangmeishux",
+    "email": "yangmeishux@users.noreply.github.com"
+  },
+  "homepage": "https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect",
+  "repository": "https://github.com/yangmeishux/ai-tools",
+  "license": "MIT",
+  "keywords": [
+    "tutorial",
+    "education",
+    "code-verification",
+    "quality-assessment",
+    "agent-collaboration",
+    "technical-writing",
+    "claude-code"
+  ]
+}
