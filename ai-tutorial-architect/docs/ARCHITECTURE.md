@@ -23,9 +23,10 @@ Quality checks at natural boundaries prevent errors from propagating:
 
 ### 3. Composability
 Agents can be combined for different workflows:
-- Full tutorial: All 11 agents
-- Quick guide: Writer + Practitioner
+- Full tutorial: All 11 agents (Core 6 + Tutorial 4 + Humanizer)
+- Quick guide: Writer + Practitioner + Version-Archivist
 - Research only: Researcher + Archivist
+- Humanization: Humanizer + Editor
 
 ### 4. Test-Driven Content
 Every code example must:
@@ -51,8 +52,9 @@ ai-tutorial-architect/
 │   ├── practitioner/       # Code validation
 │   ├── learner-advocate/   # Beginner perspective
 │   ├── version-archivist/  # Version tracking
-│   ├── tutorial-workflow/  # Workflow definitions
-│   └── quality-assurance/  # Quality framework
+│   ├── humanizer/          # AI content humanization
+│   ├── tutorial-workflow/  # Workflow definitions (supporting)
+│   └── quality-assurance/  # Quality framework (supporting)
 ├── commands/               # CLI commands
 │   ├── tutorial-create.md
 │   ├── tutorial-verify.md

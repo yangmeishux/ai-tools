@@ -124,9 +124,9 @@ Chief: Final review
 | Task | Category | Primary Agents | Time |
 |------|----------|----------------|------|
 | Complete tutorial | tutorial | All 11 agents | 6-9h |
-| Concept deep-dive | concept-guide | Researcher, Educator, Writer | 3-4h |
-| Quick getting-started | quick-start | Writer, Practitioner | 2-3h |
-| Best practices doc | best-practice | Researcher, Writer | 2-3h |
+| Concept deep-dive | concept-guide | Researcher, Educator, Writer, Fact-Checker | 3-4h |
+| Quick getting-started | quick-start | Writer, Practitioner, Version-Archivist | 2-3h |
+| Best practices doc | best-practice | Researcher, Writer, Practitioner | 2-3h |
 | Research only | research | Researcher, Archivist | 1-2h |
 | Writing only | writing | Writer, Editor | 1-2h |
 | Editing only | editing | Editor | 30-60m |

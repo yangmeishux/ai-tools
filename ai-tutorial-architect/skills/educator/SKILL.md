@@ -104,3 +104,12 @@ Progression
 - Break into smaller chunks
 - Provide concrete examples before abstractions
 - Check with Learner-Advocate for cognitive load
+
+## Integration
+
+**Works with:**
+- **Researcher** - Get depth on learning science and pedagogy
+- **Writer** - Translate learning design into content
+- **Learner-Advocate** - Validate accessibility for target audience
+- **Practitioner** - Ensure exercises are technically feasible
+- **Chief** - Plan tutorial scope and learning objectives

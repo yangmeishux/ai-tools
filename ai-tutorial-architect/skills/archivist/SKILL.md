@@ -89,3 +89,12 @@ digraph archival {
 - Note the conflict
 - Explain when to use each
 - Suggest resolution or versioning
+
+## Integration
+
+**Works with:**
+- **Chief** - Understand project context and find relevant precedents
+- **Researcher** - Provide historical context for research topics
+- **Writer** - Find examples and references to cite
+- **Educator** - Map prerequisite relationships for learning paths
+- **Version-Archivist** - Track tutorial versions and updates

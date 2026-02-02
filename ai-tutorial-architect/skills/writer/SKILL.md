@@ -102,3 +102,13 @@ if user:
 - Show a concrete example
 - Break into smaller steps
 - Ask Educator for learning-path guidance
+
+## Integration
+
+**Works with:**
+- **Researcher** - Get source material and technical details
+- **Educator** - Follow learning path design and difficulty progression
+- **Practitioner** - Understand code requirements and constraints
+- **Editor** - Receive structural and clarity feedback
+- **Fact-Checker** - Flag claims needing verification
+- **Humanizer** - Pass polished content for tone refinement

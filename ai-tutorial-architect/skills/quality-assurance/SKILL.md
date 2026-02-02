@@ -50,7 +50,7 @@ digraph dimensions {
 - [ ] Examples run in clean environment
 - [ ] No hidden dependencies
 
-### 2. Environment Completeness (Practitioner)
+### 2. Environment Completeness (Version-Archivist)
 - [ ] Prerequisites listed
 - [ ] Installation steps provided
 - [ ] Version requirements specified
@@ -68,11 +68,11 @@ digraph dimensions {
 - [ ] No unexplained jargon
 - [ ] Glossary or index provided
 
-### 5. Error Handling (Practitioner + Learner-Advocate)
-- [ ] Common errors anticipated
+### 5. Error Handling (Learner-Advocate + Practitioner)
+- [ ] Common errors anticipated from learner perspective
 - [ ] Troubleshooting steps provided
-- [ ] Error messages explained
-- [ ] Solutions given
+- [ ] Error messages explained clearly
+- [ ] Solutions and workarounds given
 
 ### 6. Version Clarity (Version-Archivist)
 - [ ] All versions documented
@@ -80,13 +80,21 @@ digraph dimensions {
 - [ ] API changes noted
 - [ ] Update path provided
 
-### 7. Practical Value (Educator + Practitioner)
+### 7. Practical Value (Educator)
+- [ ] Solves real-world problem
+- [ ] Code is reusable
+- [ ] Applications demonstrated
+- [ ] Not toy examples
 - [ ] Solves real-world problem
 - [ ] Code is reusable
 - [ ] Applications demonstrated
 - [ ] Not toy examples
 
-### 8. Reproducibility (Practitioner + Learner-Advocate)
+### 8. Reproducibility (Practitioner)
+- [ ] Steps unambiguous and complete
+- [ ] Intermediate results verifiable
+- [ ] Complete, copy-paste ready examples
+- [ ] Environment variations documented
 - [ ] Steps unambiguous
 - [ ] Intermediate results verifiable
 - [ ] Complete examples provided
@@ -138,13 +146,13 @@ digraph assessment {
 | Dimension | Score | Checked By | Notes |
 |-----------|-------|------------|-------|
 | Runnability | ✅/⚠️/❌ | Practitioner | |
-| Environment | ✅/⚠️/❌ | Practitioner | |
+| Environment | ✅/⚠️/❌ | Version-Archivist | |
 | Progressiveness | ✅/⚠️/❌ | Educator | |
 | Term Explanation | ✅/⚠️/❌ | Learner-Advocate | |
 | Error Handling | ✅/⚠️/❌ | Practitioner | |
 | Version Clarity | ✅/⚠️/❌ | Version-Archivist | |
 | Practical Value | ✅/⚠️/❌ | Educator | |
-| Reproducibility | ✅/⚠️/❌ | Learner-Advocate | |
+| Reproducibility | ✅/⚠️/❌ | Practitioner | |
 
 ### Required Improvements
 - [ ] [Dimension]: [Issue] → [Fix assigned to]

@@ -88,3 +88,12 @@ digraph editing {
 - Flag for Writer revision rather than editing around
 - Note what Educator or Practitioner should verify
 - Suggest structural changes, not just word changes
+
+## Integration
+
+**Works with:**
+- **Writer** - Provide feedback on draft content
+- **Educator** - Ensure pedagogical soundness is maintained
+- **Humanizer** - Hand off for tone refinement after structural edits
+- **Fact-Checker** - Flag claims that need verification
+- **Chief** - Report on content quality and readiness

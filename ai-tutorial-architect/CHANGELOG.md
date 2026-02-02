@@ -198,7 +198,7 @@ Each agent now has its own skill directory following superpowers conventions:
 
 ⚠️ **注意**：从 v1.x 升级到 v2.0 需要注意：
 
-1. Agent 数量从 6 个增加到 10 个
+1. Agent 数量从 6 个增加到 10 个（注：v2.2.0 新增 Humanizer，现为 11 个）
 2. 新增 4 个教程专用任务类别
 3. 推荐使用新的 AI 编程教程工作流程
 4. 质量标准从通用评估升级为 8 维评估体系

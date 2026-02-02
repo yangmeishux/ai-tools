@@ -87,3 +87,13 @@ digraph research {
 - Note the conflict explicitly
 - Explain why different sources disagree
 - Recommend based on your assessment
+
+## Integration
+
+**Works with:**
+- **Chief** - Understand research scope and priorities
+- **Archivist** - Find historical context and past decisions
+- **Writer** - Provide source material and technical depth
+- **Fact-Checker** - Supply sources for verification
+- **Educator** - Research pedagogical approaches and learning science
+- **Practitioner** - Investigate technical feasibility of approaches

@@ -93,3 +93,13 @@ digraph factcheck {
 - Mark confidence level clearly
 - Suggest additional verification
 - Note conflicting sources if found
+
+## Integration
+
+**Works with:**
+- **Researcher** - Access sources and verify findings
+- **Writer** - Query about claim sources and intent
+- **Version-Archivist** - Verify version-specific claims
+- **Practitioner** - Confirm code behavior claims
+- **Humanizer** - Verify accuracy is preserved after tone changes
+- **Chief** - Report on overall accuracy status

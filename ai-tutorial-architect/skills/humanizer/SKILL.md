@@ -211,7 +211,7 @@ Don't force synonyms. Repeat words when they're clearest.
 
 **Typical workflow position:**
 ```
-Writer → Editor → [Humanizer] → Fact-Checker → Version-Archivist
+Writer → Editor → [Humanizer] → Version-Archivist → Fact-Checker
 ```
 
 **Works with:**

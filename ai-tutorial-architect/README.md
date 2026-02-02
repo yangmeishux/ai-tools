@@ -86,7 +86,7 @@ git clone https://github.com/yangmeishux/ai-tools.git ai-tutorial-architect
 ### Full Tutorial (Gold Standard)
 
 ```
-Chief → Researcher/Archivist → Educator → Writer → 
+Chief → Researcher + Archivist (并行) → Educator → Writer → 
 Practitioner → Learner-Advocate → Editor → [Humanizer] →
 Version-Archivist → Fact-Checker → Chief
 ```
