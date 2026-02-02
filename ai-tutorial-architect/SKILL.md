@@ -32,7 +32,7 @@ Or use task classifications:
 - Ensuring tutorial quality
 - Converting knowledge to teachable form
 
-## The 10 Agents
+## The 11 Agents
 
 ### Core Team (6 agents)
 
@@ -116,11 +116,84 @@ See [quality-assurance skill](skills/quality-assurance/SKILL.md) for assessment 
 
 ## Commands
 
-| Command | Purpose |
-|---------|---------|
-| `/tutorial:create` | Full tutorial creation workflow |
-| `/tutorial:verify` | 8-dimensional quality check |
-| `/code:validate` | Execute and verify code examples |
+| Command | Purpose | Details |
+|---------|---------|---------|
+| `/tutorial:create` | Full tutorial creation workflow | [View details](commands/tutorial-create.md) |
+| `/tutorial:verify` | 8-dimensional quality check | [View details](commands/tutorial-verify.md) |
+| `/code:validate` | Execute and verify code examples | [View details](commands/code-validate.md) |
+
+## Project Resources
+
+### 📚 Documentation (`docs/`)
+
+| Document | Description |
+|----------|-------------|
+| [ARCHITECTURE.md](docs/ARCHITECTURE.md) | System architecture and design principles |
+| [INSTALLATION.md](docs/INSTALLATION.md) | Installation guide for Claude Code |
+| [ANALYSIS_AI_HUMANIZATION.md](docs/ANALYSIS_AI_HUMANIZATION.md) | AI content humanization analysis and design |
+
+### 📝 Templates (`templates/`)
+
+See [templates/README.md](templates/README.md) for complete template documentation.
+
+**Template Categories:**
+
+| Category | Templates |
+|----------|-----------|
+| **基础框架** (2个) | 教程基础框架模板, 系列教程索引模板 |
+| **教程类型** (9个) | 完整教程创作模板, 概念指南模板, 快速开始模板, 最佳实践模板, API参考文档模板, 迁移升级指南模板, 技术对比选型指南模板, 实战案例复盘模板, 速查表备忘单模板 |
+| **质量控制** (4个) | 8维质量检查清单, 版本追踪模板, 错误排查指南模板, 代码审查清单模板 |
+
+**Quick Template Selection:**
+
+```
+完整教程      → [task:tutorial] + 完整教程创作模板
+概念指南      → [task:concept-guide] + 概念指南模板
+快速上手      → [task:quick-start] + 快速开始模板
+最佳实践      → [task:best-practice] + 最佳实践模板
+API 文档      → [task:api-doc] + API参考文档模板
+迁移升级      → [task:migration] + 迁移升级指南模板
+技术对比      → [task:comparison] + 技术对比选型指南模板
+实战案例      → [task:case-study] + 实战案例复盘模板
+速查备忘      → [task:cheatsheet] + 速查表备忘单模板
+系列教程      → [task:series] + 系列教程索引模板
+```
+
+### 👥 Additional Agents (`agents/`)
+
+| Agent | Description |
+|-------|-------------|
+| [Code Reviewer](agents/code-reviewer.md) | Specialized agent for reviewing code examples |
+
+### 🧪 Tests (`tests/`)
+
+Test suite for validating the tutorial system:
+- `README.md` - Test documentation
+- `test_all.py` - Python test suite
+- `run_all_tests.sh` - Test runner script
+- `TEST_REPORT.md` - Latest test results
+- `integration/` - Integration tests
+
+### 💡 Examples (`examples/`)
+
+| Example | Description |
+|---------|-------------|
+| [usage_examples.md](examples/usage_examples.md) | Detailed usage examples for AI Agent Team |
+
+### 📖 Featured Tutorial
+
+**[在 Cursor 中使用 Kimi Code：双 AI 协作开发指南](tutorial-cursor-kimi-code.md)**
+
+A complete hands-on tutorial demonstrating how to use Cursor and Kimi Code together for AI-assisted development. Covers:
+- Environment configuration and MCP setup
+- Decision matrix for choosing the right tool
+- Two recommended workflows (Explore-Verify and Refactor-Confirm)
+- Complete code refactoring case study
+- Quick reference cheat sheet
+
+**Target audience:** Developers using AI-assisted coding tools  
+**Quality level:** 🥇 Gold Standard  
+**Estimated reading time:** 30 minutes
 
 ## Example Usage
 
@@ -188,6 +261,8 @@ Result: 🥈 Silver (2 minor improvements needed)
 - Use Practitioner for all code tutorials
 - Include Learner-Advocate for beginner content
 - Run quality assessment before publication
+- Choose appropriate template from `templates/`
+- Reference examples in `examples/` for guidance
 
 **Don't:**
 - Skip code verification
@@ -201,6 +276,43 @@ Works with other skills:
 - `/brainstorming` - Before tutorial planning
 - `/docx`, `/pdf` - Export final tutorials
 - `/obsidian-markdown` - Knowledge base format
+
+## Project Structure
+
+```
+ai-tutorial-architect/
+├── SKILL.md                    # This file - entry point
+├── README.md                   # Main documentation
+├── README-ZH.md               # Chinese documentation
+├── tutorial-cursor-kimi-code.md # Featured tutorial
+├── QUICK_REFERENCE.md         # Quick reference card
+├── CONTRIBUTING.md            # Contribution guidelines
+├── CHANGELOG.md               # Version history
+├── ROADMAP.md                 # Future plans
+├── skills/                    # 13 Agent skills
+│   ├── chief/
+│   ├── researcher/
+│   ├── writer/
+│   ├── editor/
+│   ├── fact-checker/
+│   ├── archivist/
+│   ├── educator/
+│   ├── practitioner/
+│   ├── learner-advocate/
+│   ├── version-archivist/
+│   ├── humanizer/
+│   ├── tutorial-workflow/
+│   └── quality-assurance/
+├── templates/                 # 15 Writing templates
+│   ├── 基础框架/ (2)
+│   ├── 教程类型/ (9)
+│   └── 质量控制/ (4)
+├── commands/                  # 3 CLI commands
+├── agents/                    # Additional agents
+├── docs/                      # Documentation
+├── examples/                  # Usage examples
+└── tests/                     # Test suite
+```
 
 ---
 

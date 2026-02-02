@@ -46,7 +46,7 @@ tests/
 - Cross-references valid
 
 ### 4. Integration
-- Full workflow (10 agents)
+- Full workflow (11 agents)
 - Quick-start workflow
 - Quality framework (8 dimensions)
 - Task classifications

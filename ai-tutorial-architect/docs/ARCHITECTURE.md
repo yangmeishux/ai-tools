@@ -23,7 +23,7 @@ Quality checks at natural boundaries prevent errors from propagating:
 
 ### 3. Composability
 Agents can be combined for different workflows:
-- Full tutorial: All 10 agents
+- Full tutorial: All 11 agents
 - Quick guide: Writer + Practitioner
 - Research only: Researcher + Archivist
 

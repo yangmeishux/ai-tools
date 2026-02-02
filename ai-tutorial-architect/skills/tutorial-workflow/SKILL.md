@@ -123,7 +123,7 @@ Chief: Final review
 
 | Task | Category | Primary Agents | Time |
 |------|----------|----------------|------|
-| Complete tutorial | tutorial | All 10 + Humanizer | 6-8h (7-9h with humanization) |
+| Complete tutorial | tutorial | All 11 agents | 6-9h |
 | Concept deep-dive | concept-guide | Researcher, Educator, Writer | 3-4h |
 | Quick getting-started | quick-start | Writer, Practitioner | 2-3h |
 | Best practices doc | best-practice | Researcher, Writer | 2-3h |

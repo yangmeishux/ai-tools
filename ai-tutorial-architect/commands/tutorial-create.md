@@ -1,6 +1,6 @@
 # /tutorial:create - Create Complete Tutorial
 
-Launch the full tutorial creation workflow with all 10 agents.
+Launch the full tutorial creation workflow with all 11 agents.
 
 ## Usage
 
@@ -18,7 +18,7 @@ Launch the full tutorial creation workflow with all 10 agents.
 ## What It Does
 
 1. Chief coordinates the full workflow
-2. All 10 agents participate
+2. All 11 agents participate
 3. Quality gates at each phase
 4. Gold standard output
 

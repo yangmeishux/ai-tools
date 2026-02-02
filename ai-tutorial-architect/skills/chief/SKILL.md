@@ -129,7 +129,7 @@ Set checkpoints at natural boundaries:
 **Never:**
 - Skip checkpoint reviews
 - Assign mismatched agents (e.g., Fact-Checker for creative writing)
-- Run all 10 agents for simple tasks
+- Run all 11 agents for simple tasks
 - Lose track of which agent owns which deliverable
 - Accept deliverables that fail quality gates without revision
 
