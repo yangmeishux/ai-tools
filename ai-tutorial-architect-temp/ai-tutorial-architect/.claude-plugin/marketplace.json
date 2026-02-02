@@ -1,9 +1,0 @@
-{
-  "id": "ai-tutorial-architect",
-  "name": "AI Tutorial Architect",
-  "description": "Professional AI programming tutorial creation system - 10 specialized agents for tutorial design, code verification, and quality assessment",
-  "version": "2.2.0",
-  "author": "yangmeishux",
-  "tags": ["tutorial", "education", "quality", "agents"],
-  "homepage": "https://github.com/yangmeishux/ai-tools/tree/main/ai-tutorial-architect"
-}
